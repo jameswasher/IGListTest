@@ -12,6 +12,7 @@
 		1A1F06101E0208EF00C0B068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F060E1E0208EF00C0B068 /* Main.storyboard */; };
 		1A1F06121E0208EF00C0B068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F06111E0208EF00C0B068 /* Assets.xcassets */; };
 		1A1F06151E0208EF00C0B068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F06131E0208EF00C0B068 /* LaunchScreen.storyboard */; };
+		4B316EBA68D584EA74F70C82 /* Pods_IGListTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6B08FD7F4F9DFF448DCA7 /* Pods_IGListTesting.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		1A1F06111E0208EF00C0B068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A1F06141E0208EF00C0B068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1F06161E0208EF00C0B068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44F8A0DE9223F00CABD0018E /* Pods-IGListTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListTesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListTesting/Pods-IGListTesting.debug.xcconfig"; sourceTree = "<group>"; };
+		470EBA6C4CAE91DE6EF8739E /* Pods-IGListTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListTesting/Pods-IGListTesting.release.xcconfig"; sourceTree = "<group>"; };
+		7EC6B08FD7F4F9DFF448DCA7 /* Pods_IGListTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B316EBA68D584EA74F70C82 /* Pods_IGListTesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				1A1F06091E0208EF00C0B068 /* IGListTesting */,
 				1A1F06081E0208EF00C0B068 /* Products */,
+				74DC3BF4F3572FF1651D0280 /* Pods */,
+				774D3DD0FDEC1472708034CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = IGListTesting;
 			sourceTree = "<group>";
 		};
+		74DC3BF4F3572FF1651D0280 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				44F8A0DE9223F00CABD0018E /* Pods-IGListTesting.debug.xcconfig */,
+				470EBA6C4CAE91DE6EF8739E /* Pods-IGListTesting.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		774D3DD0FDEC1472708034CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EC6B08FD7F4F9DFF448DCA7 /* Pods_IGListTesting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A1F06191E0208EF00C0B068 /* Build configuration list for PBXNativeTarget "IGListTesting" */;
 			buildPhases = (
+				141408818BC28F623180A997 /* [CP] Check Pods Manifest.lock */,
 				1A1F06031E0208EF00C0B068 /* Sources */,
 				1A1F06041E0208EF00C0B068 /* Frameworks */,
 				1A1F06051E0208EF00C0B068 /* Resources */,
+				66B6E4E5A27BA3EFED37B6E2 /* [CP] Embed Pods Frameworks */,
+				1FBBB27A4F5F53FB61EF77C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		141408818BC28F623180A997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1FBBB27A4F5F53FB61EF77C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGListTesting/Pods-IGListTesting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66B6E4E5A27BA3EFED37B6E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGListTesting/Pods-IGListTesting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1A1F06031E0208EF00C0B068 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		1A1F061A1E0208EF00C0B068 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44F8A0DE9223F00CABD0018E /* Pods-IGListTesting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IGListTesting/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		1A1F061B1E0208EF00C0B068 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 470EBA6C4CAE91DE6EF8739E /* Pods-IGListTesting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IGListTesting/Info.plist;
