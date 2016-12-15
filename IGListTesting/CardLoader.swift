@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 private func delay(time: Double = 1, execute work: @escaping @convention(block) () -> Swift.Void) {
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
@@ -21,20 +22,30 @@ protocol CardLoaderDelegate {
 
 class CardLoader {
     var delegate: CardLoaderDelegate?
-    var cards: [Card] = {
-        var arr = [Card]()
-        arr.append(Card(key: "1", front: "front of card 1", back: "back of card 1"))
-        arr.append(Card(key: "2", front: "front of card 2", back: "back of card 2"))
-        return arr
-        }() {
+    
+    var cardsDictionary: [String:Card] = [:] {
         didSet {
             delegate?.cardLoaderDidUpdate()
         }
     }
     
+    var cards: [Card] {
+        return Array(cardsDictionary.values)
+    }
+    
     func loadCards() {
-        delay(time: 2.3) {
-            self.cards.append(Card(key: "3", front: "front of card 3", back: "back of card 3"))
-        }
+        let ref = FIRDatabase.database().reference(withPath: "dev/cards-exam/10")
+        ref.observe(.childAdded, with: { snapshot in
+            let card = Card(snapshot: snapshot)
+            self.cardsDictionary[card.key] = card
+        })
+        ref.observe(.childChanged, with: { snapshot in
+            let card = Card(snapshot: snapshot)
+            self.cardsDictionary[card.key] = card
+        })
+        ref.observe(.childRemoved, with: { snapshot in
+            let card = Card(snapshot: snapshot)
+            self.cardsDictionary.removeValue(forKey: card.key)
+        })
     }
 }

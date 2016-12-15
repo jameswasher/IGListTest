@@ -7,4 +7,8 @@ target 'IGListTesting' do
 
   # Pods for IGListTesting
 pod 'IGListKit', :git => 'https://github.com/Instagram/IGListKit.git', :branch => 'master'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'Firebase/Database'
+
 end

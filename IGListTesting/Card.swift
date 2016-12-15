@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Card: NSObject {
     
@@ -23,5 +24,10 @@ class Card: NSObject {
         self.back = back
     }
 
-    
+    init(snapshot: FIRDataSnapshot) {
+        key = snapshot.key
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        front = (snapshotValue["front"] as! String).replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\r", with: "")
+        back = (snapshotValue["back"] as! String).replacingOccurrences(of: "\n", with: "").replacingOccurrences(of: "\r", with: "")
+    }
 }

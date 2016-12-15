@@ -17,6 +17,7 @@
 		1A1F06221E020C1000C0B068 /* NSObject+IGListDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F06211E020C1000C0B068 /* NSObject+IGListDiffable.swift */; };
 		1A1F06251E020D4F00C0B068 /* CardSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F06241E020D4F00C0B068 /* CardSectionController.swift */; };
 		1A1F06291E02107100C0B068 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F06281E02107100C0B068 /* LabelCell.swift */; };
+		1A4B14B01E02153B003E941E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A4B14AF1E02153B003E941E /* GoogleService-Info.plist */; };
 		4B316EBA68D584EA74F70C82 /* Pods_IGListTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6B08FD7F4F9DFF448DCA7 /* Pods_IGListTesting.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		1A1F06211E020C1000C0B068 /* NSObject+IGListDiffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+IGListDiffable.swift"; sourceTree = "<group>"; };
 		1A1F06241E020D4F00C0B068 /* CardSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSectionController.swift; sourceTree = "<group>"; };
 		1A1F06281E02107100C0B068 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		1A4B14AF1E02153B003E941E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		44F8A0DE9223F00CABD0018E /* Pods-IGListTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListTesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListTesting/Pods-IGListTesting.debug.xcconfig"; sourceTree = "<group>"; };
 		470EBA6C4CAE91DE6EF8739E /* Pods-IGListTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListTesting/Pods-IGListTesting.release.xcconfig"; sourceTree = "<group>"; };
 		7EC6B08FD7F4F9DFF448DCA7 /* Pods_IGListTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 				1A1F06111E0208EF00C0B068 /* Assets.xcassets */,
 				1A1F06131E0208EF00C0B068 /* LaunchScreen.storyboard */,
 				1A1F06161E0208EF00C0B068 /* Info.plist */,
+				1A4B14AF1E02153B003E941E /* GoogleService-Info.plist */,
 			);
 			path = IGListTesting;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A4B14B01E02153B003E941E /* GoogleService-Info.plist in Resources */,
 				1A1F06151E0208EF00C0B068 /* LaunchScreen.storyboard in Resources */,
 				1A1F06121E0208EF00C0B068 /* Assets.xcassets in Resources */,
 				1A1F06101E0208EF00C0B068 /* Main.storyboard in Resources */,
@@ -309,6 +313,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -359,6 +364,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

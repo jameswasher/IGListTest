@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>339234875801-ershq08cd2qdr02qbclqp8ale2jong35.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.339234875801-ershq08cd2qdr02qbclqp8ale2jong35</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAjENap6dXwIpxwFDdtaHEyw5txMwzcp08</string>
+	<key>GCM_SENDER_ID</key>
+	<string>339234875801</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>The-Infinite-Actuary-LLC.IGListTesting</string>
+	<key>PROJECT_ID</key>
+	<string>flashcards-649b9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>flashcards-649b9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:339234875801:ios:db04a27e442c0c78</string>
+	<key>DATABASE_URL</key>
+	<string>https://flashcards-649b9.firebaseio.com</string>
+</dict>
+</plist>
