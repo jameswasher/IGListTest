@@ -10,17 +10,17 @@ import UIKit
 import IGListKit
 
 class CardSectionController: IGListSectionController {
-    var card: Card!
+    var lesson: Lesson!
     
     override init() {
         super.init()
-        inset = UIEdgeInsets(top: 0, left: 0, bottom: 15, right: 0)
+        supplementaryViewSource = self
     }
 }
 
 extension CardSectionController: IGListSectionType {
     func numberOfItems() -> Int {
-        return 1
+        return lesson.cards.count
     }
     
     func sizeForItem(at index: Int) -> CGSize {
@@ -31,16 +31,33 @@ extension CardSectionController: IGListSectionType {
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext!.dequeueReusableCell(of: LabelCell.self, for: self, at: index) as! LabelCell
-        cell.label.text = card.front
+        cell.label.text = lesson.cards[index].front
         return cell
     }
     
     func didUpdate(to object: Any) {
-        self.card = object as? Card
+        self.lesson = object as? Lesson
     }
     
     func didSelectItem(at index: Int) {
         
         
+    }
+}
+
+extension CardSectionController: IGListSupplementaryViewSource {
+    func supportedElementKinds() -> [String] {
+        return [UICollectionElementKindSectionHeader]
+    }
+    
+    func viewForSupplementaryElement(ofKind elementKind: String, at index: Int) -> UICollectionReusableView {
+        let view = collectionContext?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, for: self, class: LessonHeaderView.self, at: index) as! LessonHeaderView
+        
+        view.label.text = lesson.name
+        return view
+    }
+    
+    func sizeForSupplementaryView(ofKind elementKind: String, at index: Int) -> CGSize {
+        return CGSize(width: collectionContext!.containerSize.width, height: 40)
     }
 }

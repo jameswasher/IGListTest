@@ -23,29 +23,38 @@ protocol CardLoaderDelegate {
 class CardLoader {
     var delegate: CardLoaderDelegate?
     
-    var cardsDictionary: [String:Card] = [:] {
+    var lessonDictionary: [String:Lesson] = [:] {
         didSet {
             delegate?.cardLoaderDidUpdate()
         }
     }
     
-    var cards: [Card] {
-        return Array(cardsDictionary.values)
+    var lessons: [Lesson] {
+        return Array(lessonDictionary.values)
     }
     
     func loadCards() {
         let ref = FIRDatabase.database().reference(withPath: "dev/cards-exam/10")
         ref.observe(.childAdded, with: { snapshot in
             let card = Card(snapshot: snapshot)
-            self.cardsDictionary[card.key] = card
+            if self.lessonDictionary[card.lessonTitle] == nil {
+                self.lessonDictionary[card.lessonTitle] = Lesson(name: card.lessonTitle, card: card)
+            } else {
+                self.lessonDictionary[card.lessonTitle]?.cards.append(card)
+            }
         })
         ref.observe(.childChanged, with: { snapshot in
             let card = Card(snapshot: snapshot)
-            self.cardsDictionary[card.key] = card
+            if self.lessonDictionary[card.lessonTitle] == nil {
+                self.lessonDictionary[card.lessonTitle] = Lesson(name: card.lessonTitle, card: card)
+            } else {
+                self.lessonDictionary[card.lessonTitle]?.cards.append(card)
+            }
         })
         ref.observe(.childRemoved, with: { snapshot in
             let card = Card(snapshot: snapshot)
-            self.cardsDictionary.removeValue(forKey: card.key)
+            self.lessonDictionary[card.lessonTitle]?.remove(card: card)
         })
     }
+    
 }

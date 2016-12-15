@@ -42,7 +42,7 @@ class CardViewController: UIViewController {
 
 extension CardViewController: IGListAdapterDataSource {
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
-        return cardLoader.cards as [IGListDiffable]
+        return cardLoader.lessons as [IGListDiffable]
     }
     
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {

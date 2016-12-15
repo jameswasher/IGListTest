@@ -46,6 +46,14 @@ class LabelCell: UICollectionViewCell {
         self.contentView.layer.addSublayer(layer)
         return layer
     }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -54,12 +62,6 @@ class LabelCell: UICollectionViewCell {
         let height: CGFloat = 0.5
         let left = LabelCell.insets.left
         separator.frame = CGRect(x: left, y: bounds.height - height, width: bounds.width - left, height: height)
-    }
-
-    override var isHighlighted: Bool {
-        didSet {
-            contentView.backgroundColor = UIColor(white: isHighlighted ? 0.9 : 1, alpha: 1)
-        }
     }
     
 }

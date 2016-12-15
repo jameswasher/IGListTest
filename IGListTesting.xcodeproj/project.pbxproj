@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A165F6C1E02D6E500AC21D2 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A165F6B1E02D6E500AC21D2 /* Lesson.swift */; };
+		1A165F6E1E02EBA000AC21D2 /* LessonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A165F6D1E02EBA000AC21D2 /* LessonHeaderView.swift */; };
 		1A1F060B1E0208EF00C0B068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F060A1E0208EF00C0B068 /* AppDelegate.swift */; };
 		1A1F060D1E0208EF00C0B068 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F060C1E0208EF00C0B068 /* CardViewController.swift */; };
 		1A1F06101E0208EF00C0B068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F060E1E0208EF00C0B068 /* Main.storyboard */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A165F6B1E02D6E500AC21D2 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		1A165F6D1E02EBA000AC21D2 /* LessonHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonHeaderView.swift; sourceTree = "<group>"; };
 		1A1F06071E0208EF00C0B068 /* IGListTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGListTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1F060A1E0208EF00C0B068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A1F060C1E0208EF00C0B068 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A165F6A1E02D65F00AC21D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A1F06281E02107100C0B068 /* LabelCell.swift */,
+				1A165F6D1E02EBA000AC21D2 /* LessonHeaderView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		1A1F05FE1E0208EF00C0B068 = {
 			isa = PBXGroup;
 			children = (
@@ -74,11 +87,11 @@
 			isa = PBXGroup;
 			children = (
 				1A1F060A1E0208EF00C0B068 /* AppDelegate.swift */,
-				1A1F06281E02107100C0B068 /* LabelCell.swift */,
 				1A1F061E1E020B7D00C0B068 /* Model */,
+				1A165F6A1E02D65F00AC21D2 /* Views */,
 				1A1F06271E020D6500C0B068 /* ViewControllers */,
-				1A1F06231E020C5200C0B068 /* Systems */,
 				1A1F06261E020D5700C0B068 /* SectionControllers */,
+				1A1F06231E020C5200C0B068 /* Systems */,
 				1A1F060E1E0208EF00C0B068 /* Main.storyboard */,
 				1A1F06111E0208EF00C0B068 /* Assets.xcassets */,
 				1A1F06131E0208EF00C0B068 /* LaunchScreen.storyboard */,
@@ -93,6 +106,7 @@
 			children = (
 				1A1F06211E020C1000C0B068 /* NSObject+IGListDiffable.swift */,
 				1A1F061C1E020B7700C0B068 /* Card.swift */,
+				1A165F6B1E02D6E500AC21D2 /* Lesson.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -266,9 +280,11 @@
 				1A1F06201E020B9F00C0B068 /* CardLoader.swift in Sources */,
 				1A1F060D1E0208EF00C0B068 /* CardViewController.swift in Sources */,
 				1A1F06291E02107100C0B068 /* LabelCell.swift in Sources */,
+				1A165F6C1E02D6E500AC21D2 /* Lesson.swift in Sources */,
 				1A1F061D1E020B7700C0B068 /* Card.swift in Sources */,
 				1A1F06251E020D4F00C0B068 /* CardSectionController.swift in Sources */,
 				1A1F060B1E0208EF00C0B068 /* AppDelegate.swift in Sources */,
+				1A165F6E1E02EBA000AC21D2 /* LessonHeaderView.swift in Sources */,
 				1A1F06221E020C1000C0B068 /* NSObject+IGListDiffable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
