@@ -8,21 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		1A1F060B1E0208EF00C0B068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F060A1E0208EF00C0B068 /* AppDelegate.swift */; };
-		1A1F060D1E0208EF00C0B068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F060C1E0208EF00C0B068 /* ViewController.swift */; };
+		1A1F060D1E0208EF00C0B068 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F060C1E0208EF00C0B068 /* CardViewController.swift */; };
 		1A1F06101E0208EF00C0B068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F060E1E0208EF00C0B068 /* Main.storyboard */; };
 		1A1F06121E0208EF00C0B068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F06111E0208EF00C0B068 /* Assets.xcassets */; };
 		1A1F06151E0208EF00C0B068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F06131E0208EF00C0B068 /* LaunchScreen.storyboard */; };
+		1A1F061D1E020B7700C0B068 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F061C1E020B7700C0B068 /* Card.swift */; };
+		1A1F06201E020B9F00C0B068 /* CardLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F061F1E020B9F00C0B068 /* CardLoader.swift */; };
+		1A1F06221E020C1000C0B068 /* NSObject+IGListDiffable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F06211E020C1000C0B068 /* NSObject+IGListDiffable.swift */; };
+		1A1F06251E020D4F00C0B068 /* CardSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F06241E020D4F00C0B068 /* CardSectionController.swift */; };
+		1A1F06291E02107100C0B068 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F06281E02107100C0B068 /* LabelCell.swift */; };
 		4B316EBA68D584EA74F70C82 /* Pods_IGListTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC6B08FD7F4F9DFF448DCA7 /* Pods_IGListTesting.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A1F06071E0208EF00C0B068 /* IGListTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGListTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1F060A1E0208EF00C0B068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A1F060C1E0208EF00C0B068 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A1F060C1E0208EF00C0B068 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		1A1F060F1E0208EF00C0B068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A1F06111E0208EF00C0B068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A1F06141E0208EF00C0B068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A1F06161E0208EF00C0B068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A1F061C1E020B7700C0B068 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1A1F061F1E020B9F00C0B068 /* CardLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardLoader.swift; sourceTree = "<group>"; };
+		1A1F06211E020C1000C0B068 /* NSObject+IGListDiffable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+IGListDiffable.swift"; sourceTree = "<group>"; };
+		1A1F06241E020D4F00C0B068 /* CardSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSectionController.swift; sourceTree = "<group>"; };
+		1A1F06281E02107100C0B068 /* LabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
 		44F8A0DE9223F00CABD0018E /* Pods-IGListTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListTesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListTesting/Pods-IGListTesting.debug.xcconfig"; sourceTree = "<group>"; };
 		470EBA6C4CAE91DE6EF8739E /* Pods-IGListTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListTesting/Pods-IGListTesting.release.xcconfig"; sourceTree = "<group>"; };
 		7EC6B08FD7F4F9DFF448DCA7 /* Pods_IGListTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,13 +72,50 @@
 			isa = PBXGroup;
 			children = (
 				1A1F060A1E0208EF00C0B068 /* AppDelegate.swift */,
-				1A1F060C1E0208EF00C0B068 /* ViewController.swift */,
+				1A1F06281E02107100C0B068 /* LabelCell.swift */,
+				1A1F061E1E020B7D00C0B068 /* Model */,
+				1A1F06271E020D6500C0B068 /* ViewControllers */,
+				1A1F06231E020C5200C0B068 /* Systems */,
+				1A1F06261E020D5700C0B068 /* SectionControllers */,
 				1A1F060E1E0208EF00C0B068 /* Main.storyboard */,
 				1A1F06111E0208EF00C0B068 /* Assets.xcassets */,
 				1A1F06131E0208EF00C0B068 /* LaunchScreen.storyboard */,
 				1A1F06161E0208EF00C0B068 /* Info.plist */,
 			);
 			path = IGListTesting;
+			sourceTree = "<group>";
+		};
+		1A1F061E1E020B7D00C0B068 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A1F06211E020C1000C0B068 /* NSObject+IGListDiffable.swift */,
+				1A1F061C1E020B7700C0B068 /* Card.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1A1F06231E020C5200C0B068 /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				1A1F061F1E020B9F00C0B068 /* CardLoader.swift */,
+			);
+			name = Systems;
+			sourceTree = "<group>";
+		};
+		1A1F06261E020D5700C0B068 /* SectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A1F06241E020D4F00C0B068 /* CardSectionController.swift */,
+			);
+			name = SectionControllers;
+			sourceTree = "<group>";
+		};
+		1A1F06271E020D6500C0B068 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A1F060C1E0208EF00C0B068 /* CardViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		74DC3BF4F3572FF1651D0280 /* Pods */ = {
@@ -123,6 +170,7 @@
 				TargetAttributes = {
 					1A1F06061E0208EF00C0B068 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = PQ3HEEN697;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -211,8 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A1F060D1E0208EF00C0B068 /* ViewController.swift in Sources */,
+				1A1F06201E020B9F00C0B068 /* CardLoader.swift in Sources */,
+				1A1F060D1E0208EF00C0B068 /* CardViewController.swift in Sources */,
+				1A1F06291E02107100C0B068 /* LabelCell.swift in Sources */,
+				1A1F061D1E020B7700C0B068 /* Card.swift in Sources */,
+				1A1F06251E020D4F00C0B068 /* CardSectionController.swift in Sources */,
 				1A1F060B1E0208EF00C0B068 /* AppDelegate.swift in Sources */,
+				1A1F06221E020C1000C0B068 /* NSObject+IGListDiffable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +389,7 @@
 			baseConfigurationReference = 44F8A0DE9223F00CABD0018E /* Pods-IGListTesting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PQ3HEEN697;
 				INFOPLIST_FILE = IGListTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "The-Infinite-Actuary-LLC.IGListTesting";
@@ -349,6 +403,7 @@
 			baseConfigurationReference = 470EBA6C4CAE91DE6EF8739E /* Pods-IGListTesting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PQ3HEEN697;
 				INFOPLIST_FILE = IGListTesting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "The-Infinite-Actuary-LLC.IGListTesting";
@@ -376,6 +431,7 @@
 				1A1F061B1E0208EF00C0B068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
