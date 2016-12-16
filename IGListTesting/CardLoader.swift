@@ -33,7 +33,19 @@ class CardLoader {
         return Array(lessonDictionary.values)
     }
     
-    func loadCards() {
+    var todayCards: [String:Card] = [:]
+    
+    func loadTodayCards() {
+        let ref = FIRDatabase.database().reference(withPath: "dev/todayCards/4185/10")
+        
+        ref.observe(.childAdded, with: { snapshot in
+             
+        })
+        
+        
+    }
+    
+    func loadAllCards() {
         let ref = FIRDatabase.database().reference(withPath: "dev/cards-exam/10")
         ref.observe(.childAdded, with: { snapshot in
             let card = Card(snapshot: snapshot)
