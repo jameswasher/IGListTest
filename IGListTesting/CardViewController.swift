@@ -28,7 +28,7 @@ class CardViewController: UIViewController {
         title = "Cards"
         view.addSubview(collectionView)
         cardLoader.delegate = self
-        cardLoader.loadCards()
+        cardLoader.connect()
         adapter.collectionView = collectionView
         adapter.dataSource = self
     }

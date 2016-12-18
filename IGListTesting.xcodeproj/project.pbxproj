@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1A0AC4331E042BD200079DCC /* LessonSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0AC4321E042BD200079DCC /* LessonSummaryCell.swift */; };
+		1A0AC4351E070FDB00079DCC /* LessonSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0AC4341E070FDB00079DCC /* LessonSectionViewModel.swift */; };
 		1A165F6C1E02D6E500AC21D2 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A165F6B1E02D6E500AC21D2 /* Lesson.swift */; };
-		1A165F6E1E02EBA000AC21D2 /* LessonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A165F6D1E02EBA000AC21D2 /* LessonHeaderView.swift */; };
 		1A1F060B1E0208EF00C0B068 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F060A1E0208EF00C0B068 /* AppDelegate.swift */; };
 		1A1F060D1E0208EF00C0B068 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1F060C1E0208EF00C0B068 /* CardViewController.swift */; };
 		1A1F06101E0208EF00C0B068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1F060E1E0208EF00C0B068 /* Main.storyboard */; };
@@ -26,8 +26,8 @@
 
 /* Begin PBXFileReference section */
 		1A0AC4321E042BD200079DCC /* LessonSummaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonSummaryCell.swift; sourceTree = "<group>"; };
+		1A0AC4341E070FDB00079DCC /* LessonSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonSectionViewModel.swift; sourceTree = "<group>"; };
 		1A165F6B1E02D6E500AC21D2 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
-		1A165F6D1E02EBA000AC21D2 /* LessonHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonHeaderView.swift; sourceTree = "<group>"; };
 		1A1F06071E0208EF00C0B068 /* IGListTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGListTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1F060A1E0208EF00C0B068 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A1F060C1E0208EF00C0B068 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				1A1F06281E02107100C0B068 /* LabelCell.swift */,
-				1A165F6D1E02EBA000AC21D2 /* LessonHeaderView.swift */,
 				1A0AC4321E042BD200079DCC /* LessonSummaryCell.swift */,
 			);
 			name = Views;
@@ -110,6 +109,7 @@
 				1A1F06211E020C1000C0B068 /* NSObject+IGListDiffable.swift */,
 				1A1F061C1E020B7700C0B068 /* Card.swift */,
 				1A165F6B1E02D6E500AC21D2 /* Lesson.swift */,
+				1A0AC4341E070FDB00079DCC /* LessonSectionViewModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -284,11 +284,11 @@
 				1A1F060D1E0208EF00C0B068 /* CardViewController.swift in Sources */,
 				1A1F06291E02107100C0B068 /* LabelCell.swift in Sources */,
 				1A165F6C1E02D6E500AC21D2 /* Lesson.swift in Sources */,
+				1A0AC4351E070FDB00079DCC /* LessonSectionViewModel.swift in Sources */,
 				1A1F061D1E020B7700C0B068 /* Card.swift in Sources */,
 				1A1F06251E020D4F00C0B068 /* CardSectionController.swift in Sources */,
 				1A1F060B1E0208EF00C0B068 /* AppDelegate.swift in Sources */,
 				1A0AC4331E042BD200079DCC /* LessonSummaryCell.swift in Sources */,
-				1A165F6E1E02EBA000AC21D2 /* LessonHeaderView.swift in Sources */,
 				1A1F06221E020C1000C0B068 /* NSObject+IGListDiffable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

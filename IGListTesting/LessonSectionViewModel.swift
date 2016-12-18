@@ -8,6 +8,12 @@
 
 import UIKit
 
-class LessonSectionViewModel: NSObject {
-
+struct LessonSectionViewModel {
+    let name: String
+    let cards: [Card]
+    
+    init(name: String, cards: [Card]) {
+        self.name = name
+        self.cards = cards
+    }
 }

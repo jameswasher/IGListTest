@@ -11,17 +11,17 @@ import IGListKit
 
 class CardSectionController: IGListSectionController {
     var lesson: Lesson!
+    var lessonModel: LessonSectionViewModel!
     var isExpanded = false
     
     override init() {
         super.init()
-//        supplementaryViewSource = self
     }
 }
 
 extension CardSectionController: IGListSectionType {
     func numberOfItems() -> Int {
-        return isExpanded ? lesson.cards.count + 1 : 1
+        return isExpanded ? lessonModel.cards.count + 1 : 1
     }
     
     func sizeForItem(at index: Int) -> CGSize {
@@ -37,11 +37,11 @@ extension CardSectionController: IGListSectionType {
         let cellClass: AnyClass = index == 0 ? LessonSummaryCell.self : LabelCell.self
         let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
         if let cell = cell as? LessonSummaryCell {
-            cell.titleLabel.text = lesson.name
-            cell.subtitleLabel.text =  "\(lesson.cards.count) cards"
+            cell.titleLabel.text = lessonModel.name
+            cell.subtitleLabel.text =  "\(lessonModel.cards.count) cards"
             cell.setExpanded(isExpanded)
         } else if let cell = cell as? LabelCell {
-           cell.label.text = lesson.cards[index-1].front
+           cell.label.text = lessonModel.cards[index-1].front
         }
         
         return cell
@@ -49,6 +49,7 @@ extension CardSectionController: IGListSectionType {
     
     func didUpdate(to object: Any) {
         self.lesson = object as? Lesson
+        self.lessonModel = LessonSectionViewModel(name: lesson.name, cards: lesson.cards)
     }
     
     func didSelectItem(at index: Int) {
@@ -56,20 +57,3 @@ extension CardSectionController: IGListSectionType {
         collectionContext?.reload(self)
     }
 }
-
-//extension CardSectionController: IGListSupplementaryViewSource {
-//    func supportedElementKinds() -> [String] {
-//        return [UICollectionElementKindSectionHeader]
-//    }
-//    
-//    func viewForSupplementaryElement(ofKind elementKind: String, at index: Int) -> UICollectionReusableView {
-//        let view = collectionContext?.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, for: self, class: LessonHeaderView.self, at: index) as! LessonHeaderView
-//        
-//        view.label.text = lesson.name
-//        return view
-//    }
-//    
-//    func sizeForSupplementaryView(ofKind elementKind: String, at index: Int) -> CGSize {
-//        return CGSize(width: collectionContext!.containerSize.width, height: 40)
-//    }
-//}
