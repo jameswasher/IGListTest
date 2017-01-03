@@ -30,18 +30,24 @@ extension CardSectionController: IGListSectionType {
         if index == 0 {
             return CGSize(width: width, height: 50)
         }
+        let card = lessonModel.cards[index-1]
         return CGSize(width: width, height: 100)
     }
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
-        let cellClass: AnyClass = index == 0 ? LessonSummaryCell.self : LabelCell.self
+        let cellClass: AnyClass = index == 0 ? LessonSummaryCell.self : FrontOfCardTableViewCell.self
         let cell = collectionContext!.dequeueReusableCell(of: cellClass, for: self, at: index)
         if let cell = cell as? LessonSummaryCell {
             cell.titleLabel.text = lessonModel.name
             cell.subtitleLabel.text =  "\(lessonModel.cards.count) cards"
             cell.setExpanded(isExpanded)
-        } else if let cell = cell as? LabelCell {
-           cell.label.text = lessonModel.cards[index-1].front
+        } else if let cell = cell as? FrontOfCardTableViewCell {
+            let path = Bundle.main.bundlePath
+            let baseURL = NSURL.fileURL(withPath: path)
+            let card = lessonModel.cards[index-1]
+            if let html = "<div class=\"cell\">\(card.front)</div>".htmlCode {
+                cell.webView.loadHTMLString(html, baseURL: baseURL)
+            }
         }
         
         return cell
@@ -55,5 +61,22 @@ extension CardSectionController: IGListSectionType {
     func didSelectItem(at index: Int) {
         isExpanded = !isExpanded
         collectionContext?.reload(self)
+    }
+}
+
+
+extension String {
+    var htmlCode: String? {
+        
+        if let filepath = Bundle.main.path(forResource: "MathJax/header", ofType: "html") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                return "\(contents)\(self)</body></html>"
+            } catch {
+                print("EROR: could not load header.html")
+            }
+        }
+        
+        return nil
     }
 }
